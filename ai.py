@@ -61,8 +61,5 @@ def expectiminimax(board, depth, dir = None):
         for addTileLoc in openTiles:
             board.addTile(addTileLoc, 2)
             a += 1.0/len(openTiles)*expectiminimax(board, depth - 0.5, dir)[0]
-            #a += 1.0/len(openTiles)*0.9*expectiminimax(board, depth - 0.5, dir)[0]
-            #board.addTile(addTileLoc, 4)
-            #a += 1.0/len(openTiles)*0.1*expectiminimax(board, depth - 0.5, dir)[0]
             board.addTile(addTileLoc, 0)
     return (a, dir)
