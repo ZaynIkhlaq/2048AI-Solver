@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     pygame.init()
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("2048 SEM3 Project")
+    pygame.display.set_caption("SEM3 Project M.Zain(467999) M.Abdullah(455555)")
     tileFont = pygame.font.SysFont("", 72)
     scoreFont = pygame.font.SysFont("", 22)
     gameLoop()
