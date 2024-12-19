@@ -27,8 +27,9 @@ def drawBoard(screen, board):
             color = defaultTileColor
             numberText = ''
             if board.board[i][j] != 0:
-                gComponent = 235 - log2(board.board[i][j])*((235 - 52)/(board.boardSize**2))
-                color = (235, gComponent,52)
+                gComponent = 235 - log2(board.board[i][j])*25
+                gComponent = max(0, gComponent)
+                color = (255, gComponent, 0)
                 numberText = str(board.board[i][j])
             rect = pygame.Rect(j*playRegion[0]/board.boardSize,
                                 i*playRegion[1]/board.boardSize,
@@ -104,7 +105,7 @@ if __name__ == '__main__':
 
     pygame.init()
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("2048")
+    pygame.display.set_caption("2048 SEM3 Project")
     tileFont = pygame.font.SysFont("", 72)
     scoreFont = pygame.font.SysFont("", 22)
     gameLoop()
