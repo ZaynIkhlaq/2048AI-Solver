@@ -1,15 +1,16 @@
-#AI Project 
+# AI Project Semester 3
 M.Zain - 467999
+
 M. Abdullah - 455555
 
-# 2048
+# 2048 AI Solver
 Run `python play.py` to play 2048
 
-# Install the required dependencies by running the following command
-pip install pygame
+# Install Dependencies
+`pip install -r requirements.txt`
 
 # Controls
 - **Arrow keys (UP, RIGHT, DOWN, LEFT)** to slide tiles
 - **R** to reset the game
-- **Space** to enable AI
+- **Space** to enable AI (uses expectiminimax)
 #
