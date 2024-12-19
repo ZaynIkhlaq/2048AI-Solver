@@ -1,8 +1,3 @@
-# AI Project Semester 3
-M.Zain - 467999
-
-M. Abdullah - 455555
-
 # 2048 AI Solver
 Run `python play.py` to play 2048
 
