@@ -1,3 +1,8 @@
+# AI Project Semester 3
+# Team
+M. Zain - 467999
+M. Abdullah - 455555
+
 # 2048 AI Solver
 Run `python play.py` to play 2048
 
@@ -9,3 +14,4 @@ Run `python play.py` to play 2048
 - **R** to reset the game
 - **Space** to enable AI (uses expectiminimax)
 #
+
