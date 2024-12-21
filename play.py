@@ -15,7 +15,7 @@ FPS = 60
 black = (0,0,0)
 white = (255,255,255)
 fontColor = (82, 52, 42)
-defaultTileColor = (232,232,232)
+defaultTileColor = (204, 192, 179)	#CCC0B3
 tileBoarderColor = fontColor
 
 # Game
@@ -29,7 +29,28 @@ def drawBoard(screen, board):
             if board.board[i][j] != 0:
                 gComponent = 235 - log2(board.board[i][j])*25
                 gComponent = max(0, gComponent)
-                color = (255, gComponent, 0)
+                if board.board[i][j] == 2:
+                    color = (238, 228, 218)	#EEE4DA
+                elif board.board[i][j] == 4:
+                    color = (237, 224, 200)	#EBD6C8
+                elif board.board[i][j] == 8:
+                    color = (242, 177, 121)	#F2B177
+                elif board.board[i][j] == 16:
+                    color = (245, 149, 99)	#F59563
+                elif board.board[i][j] == 32:
+                    color = (246, 124, 95)	#F6785E
+                elif board.board[i][j] == 64:
+                    color = (246, 94, 59)	#F65E3B
+                elif board.board[i][j] == 128:
+                    color = (237, 207, 114)	#EDCF72
+                elif board.board[i][j] == 256:
+                    color = (237, 204, 97)	#EDCC61
+                elif board.board[i][j] == 512:
+                    color = (237, 200, 80)	#EDC850
+                elif board.board[i][j] == 1024:
+                    color = (237, 197, 63)	#EDC53F
+                elif board.board[i][j] == 2048:
+                    color = (237, 194, 46)	#EDC232
                 numberText = str(board.board[i][j])
             rect = pygame.Rect(j*playRegion[0]/board.boardSize,
                                 i*playRegion[1]/board.boardSize,
@@ -105,7 +126,7 @@ if __name__ == '__main__':
 
     pygame.init()
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("SEM3 Project M.Zain(467999) M.Abdullah(455555)")
+    pygame.display.set_caption("SEM3 Project | Zain-467999 | Abdullah-455555")
     tileFont = pygame.font.SysFont("", 72)
     scoreFont = pygame.font.SysFont("", 22)
     gameLoop()
